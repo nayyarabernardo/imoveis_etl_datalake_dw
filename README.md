@@ -32,17 +32,19 @@ Os dados imobiliários do Rio de Janeiro contêm as seguintes colunas:
 - anuncio_valores_iptu: Valor do IPTU do imóvel.
 - anuncio_descricao: Descrição do anúncio.
 
-## Transformação dos Dados
+## Transformação dos dados
 
-Foram realizadas as seguintes transformações nos dados:
+Os dados foram transformados utilizando o PySpark e o pandas. O PySpark foi utilizado para processamento distribuído dos dados e o pandas para manipulação de dados em memória. Isso permitiu uma análise mais eficiente dos dados, reduzindo o tempo de processamento.
 
-- Foi criada a coluna valor_m2 com o valor do metro quadrado do imóvel.
-- A coluna de coordenadas imovel_endereco_localizacao_coordinates foi dropada, pois não era necessária para análise.
-- O dataframe tratado foi carregado em um bucket GCP e em um banco de dados MySQL utilizando a função to_sql.
+Algumas colunas foram criadas para uma melhor análise dos dados, como a coluna de valor por metro quadrado. Além disso, algumas colunas não necessárias, como as colunas de coordenadas, foram dropadas para simplificar a análise dos dados.
 
 ## Considerações
 
 Este projeto demonstra como realizar um processo ETL utilizando dados imobiliários do Rio de Janeiro. As transformações realizadas nos dados permitem uma análise mais eficiente e útil das informações.
+
+## Contribuição
+
+Este projeto é aberto a contribuições. Se você deseja melhorar ou adicionar recursos, sinta-se à vontade para criar uma solicitação pull ou entrar em [contato](https://www.linkedin.com/in/nayyarabernardo).
 
 ## Referências
 
